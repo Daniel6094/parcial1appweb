@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Ventas - Informática</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+</head>
+<body class="bg-light p-4">
+
+    <div class="container bg-white p-4 shadow-sm rounded">
+        <h2 class="mb-4">Gestión de Productos</h2>
+        
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label">Producto</label>
+                <select id="producto" class="form-select">
+                    <option value="Laptop Gaming">Laptop Gaming</option>
+                    <option value="Monitor 4K">Monitor 4K</option>
+                    <option value="Teclado Mecánico">Teclado Mecánico</option>
+                    <option value="Mouse Ergonómico">Mouse Ergonómico</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Precio Unitario</label>
+                <input type="number" id="precio" class="form-control" placeholder="0.00" min="0">
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Cantidad</label>
+                <input type="number" id="cantidad" class="form-control" value="1" min="1">
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <button id="btnAdd" class="btn btn-primary w-100">Add</button>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+        <table class="table table-striped table-hover mt-4">
+            <thead class="table-dark">
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio Unitario</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="tablaCuerpo">
+                </tbody>
+        </table>
+
+        <div class="row mt-4">
+            <div class="col-md-4 offset-md-8">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between">
+                        Subtotal Neto: <span id="res-subtotal">$0.00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        IVA (13%): <span id="res-iva">$0.00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between active">
+                        <strong>Total:</strong> <strong id="res-total">$0.00</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+ 
+
+</body>
+</html>
